@@ -63,7 +63,7 @@ server.get('/', (req, res) => {
             if (text === false) {
                 res.status(500).send("uhhhhhh shit 🅱roke");
             } else {
-                res.send(text);
+                res.send(text.replace(/,/g,''));
             }
         })
         .catch(err => {
